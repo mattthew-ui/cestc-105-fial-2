@@ -48,5 +48,39 @@ const quizData = [
       submitBtn.disabled = false; 
     });
   }
-  
+  submitBtn.addEventListener("click", () => {
+    const selectedOption = formEl.querySelector('input[name="answer"]:checked');
+    if (selectedOption && selectedOption.value === quizData[currentQuestion].answer.toString()) {
+      score++;
+    }
+
+    currentQuestion++;
+    if (currentQuestion < quizData.length) {
+      loadQuestion();
+      submitBtn.disabled = true;
+    } else {
+      showResult();
+    }
+  });
+
+  function showResult() {
+    questionEl.style.display = "none";
+    formEl.style.display = "none";
+    submitBtn.style.display = "none";
+    resultEl.style.display = "block";
+    scoreEl.textContent = Your score: ${score} / ${quizData.length};
+  }
+
+  restartBtn.addEventListener("click", () => {
+    currentQuestion = 0;
+    score = 0;
+    questionEl.style.display = "";
+    formEl.style.display = "";
+    submitBtn.style.display = "";
+    resultEl.style.display = "none";
+    loadQuestion();
+    submitBtn.disabled = true;
+  });
+
+  loadQuestion();
   
