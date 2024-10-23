@@ -9,6 +9,9 @@ const quizData = [
   { question: "What's 9 + 10?", options: [19, 21, 910, 90], answer: 19 },
   { question: "Are the Cowboys good?", options: ["Yes", "No"], answer: "No" },
   { question: "Is Ryder a cool guy?", options: ["Yes", "No", "Maybe"], answer: "Yes" },
+  { question: "what year did Tom Brady get drafted", options: ["1998", "2001", "2000"], answer: "2000" },
+  { question: "when was the last time the cowboys won or made the super bowl?", options: ["1996", "never", "2002"], answer: "1996" },
+  { question: "how many picks has Dak Prescott thrown as of 10/23", options: ["6", "4", "10"], answer: "6" },
 ];
 
 let currentQuestion = 0;
