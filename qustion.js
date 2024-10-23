@@ -73,7 +73,7 @@ function showResult() {
   formEl.style.display = "none";
   submitBtn.style.display = "none";
   resultEl.style.display = "block";
-  scoreEl.textContent = `Your score: ${score} / ${quizData.length}`; // Corrected template literal
+  scoreEl.textContent = `Your score: ${score} / ${quizData.length}`; 
 }
 
 restartBtn.addEventListener("click", () => {
