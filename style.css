@@ -1,2 +1,17 @@
+body{
+    background-color: skyblue;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+#quiz-container{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+
+}
+
 
   
